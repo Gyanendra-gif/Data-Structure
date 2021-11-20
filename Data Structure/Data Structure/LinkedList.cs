@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Data_Structure
 {
-   public  class LinkedList
+    public class LinkedList
     {
         internal Node head;
         internal void Add(int data) // This Method Addind Data into the List
@@ -74,5 +74,24 @@ namespace Data_Structure
             this.head = this.head.next;
             return this.head;
         }
+        internal Node RemoveLastNode() // This Method Will Remove Data From Last Node
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            if (head.next == null)
+            {
+                return null;
+            }
+            Node NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+            return head;
+        }
     }
-}
+    }
+
