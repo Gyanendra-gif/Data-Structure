@@ -7,7 +7,7 @@ namespace Data_Structure
    public  class LinkedList
     {
         internal Node head;
-        internal void Add(int data) 
+        internal void Add(int data) // This Method Addind Data into the List
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -24,6 +24,20 @@ namespace Data_Structure
                 temp.next = node;
             }
             Console.WriteLine("{0} Inserted into Linked List", node.data);
+        }
+        internal void Display() // This Method Showing the Data in the List
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+            }
         }
     }
 }
