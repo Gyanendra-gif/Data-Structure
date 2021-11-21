@@ -6,12 +6,11 @@ namespace Data_Structure
     {
         static void Main(string[] args)
         {
-            LinkedList ln = new LinkedList();
-            ln.Add(56);
-            ln.Add(30);
-            ln.Add(70);
-            ln.RemoveLastNode();
-            ln.Display();
+            StacksQueues sq = new StacksQueues();
+            sq.Add(56);
+            sq.Add(30);
+            sq.Add(70);
+            sq.Display();
         }
     }
 }
