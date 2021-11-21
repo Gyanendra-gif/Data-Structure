@@ -52,6 +52,7 @@ namespace Data_Structure
             else
             {
                 Console.WriteLine("Data at top is: " + top.data);
+
             }
         }
         internal void Pop() // Pop From The Data
