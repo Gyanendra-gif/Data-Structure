@@ -43,5 +43,36 @@ namespace Data_Structure
                 Console.WriteLine(" ");
             }
         }
+        internal void Peek() // Peek From The Data
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            else
+            {
+                Console.WriteLine("Data at top is: " + top.data);
+            }
+        }
+        internal void Pop() // Pop From The Data
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            else
+            {
+                Console.WriteLine("Data is at popped out " + top.data);
+                top = top.next;
+            }
+        }
+        internal void Isempty()
+        {
+            while (top != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
     }
 }

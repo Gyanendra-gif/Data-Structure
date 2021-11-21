@@ -10,6 +10,9 @@ namespace Data_Structure
             sq.Add(56);
             sq.Add(30);
             sq.Add(70);
+            sq.Peek();
+            sq.Pop();
+            sq.Isempty();
             sq.Display();
         }
     }
