@@ -14,7 +14,7 @@ namespace Data_Structure
             this.front = null;
             this.rear = null;
         }
-        internal void Enqueu(int data)
+        internal void Enqueu(int data) // To Add Data in Queues
         {
             Node node = new Node(data);
             if (front == null)
@@ -29,7 +29,7 @@ namespace Data_Structure
             }
             Console.WriteLine("Data is added  to the Queue" +data);
         }
-        internal void Display()
+        internal void Display() // To Display Data in Queues
         {
             if (front == null)
             {
@@ -45,6 +45,18 @@ namespace Data_Structure
                     temp = temp.next;
                 }
                 Console.WriteLine(" ");
+            }
+        }
+        internal void Dequeu() // To Remove Data From Queues
+        {
+            if (front == null)
+            {
+                Console.WriteLine("Queue is empty");
+            }
+            else
+            {
+                Console.WriteLine("perform dequeu");
+                front = front.next;
             }
         }
     }
