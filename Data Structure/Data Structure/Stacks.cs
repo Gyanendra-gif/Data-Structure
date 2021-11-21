@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Data_Structure
 {
-    class StacksQueues
+    class Stacks
     {
         internal Node top;
-        internal StacksQueues()
+        internal Stacks()
         {
             this.top = null;
         }
