@@ -92,6 +92,23 @@ namespace Data_Structure
             NewNode.next = null;
             return head;
         }
+        internal int Search(int value) // UC 7
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
+        }
     }
-    }
+  }
+
 

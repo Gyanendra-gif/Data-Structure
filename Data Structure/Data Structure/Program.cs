@@ -6,12 +6,13 @@ namespace Data_Structure
     {
         static void Main(string[] args)
         {
-            Queues qu = new Queues();
-            qu.Enqueu(70);
-            qu.Enqueu(30);
-            qu.Enqueu(56);
-            qu.Dequeu();
-            qu.Display();
+            
+            LinkedList ln = new LinkedList(); 
+            ln.Add(56);
+            ln.Add(30);
+            ln.Add(70);
+            int search = ln.Search(30);
+            Console.WriteLine(search);
         }
     }
 }
