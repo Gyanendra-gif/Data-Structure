@@ -92,7 +92,7 @@ namespace Data_Structure
             NewNode.next = null;
             return head;
         }
-        internal int Search(int value) // UC 7
+        internal int Search(int value) // It Will Search Linked List to Find Node with Value
         {
             Node node = this.head;
             int count = 0;
@@ -108,7 +108,51 @@ namespace Data_Structure
             }
             return count;
         }
+        internal void DeleteNodeAtParticularPosition(int position) // It Will Delete Node at Particular Node
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            Node temp = this.head;
+            if (position == 0)
+            {
+                this.head = temp.next;
+                return;
+            }
+            for (int i = 0; temp != null && i < position - 1; i++)
+            {
+                temp = temp.next;
+
+            }
+            if (temp == null || temp.next == null)
+            {
+                return;
+            }
+            Node next = temp.next.next;
+            temp.next = next;
+            Size();
+        }
+        internal void Size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("Length of LinkedList is :-" + " " + count);
+        }
+
     }
-  }
+}
 
 

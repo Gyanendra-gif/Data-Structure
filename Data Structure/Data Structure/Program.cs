@@ -13,6 +13,7 @@ namespace Data_Structure
             ln.Add(70);
             int search = ln.Search(30);
             Console.WriteLine(search);
+            ln.DeleteNodeAtParticularPosition(search);
         }
     }
 }
